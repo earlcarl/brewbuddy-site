@@ -2,80 +2,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrewBuddy | Brew Smart. Stay Sharp.</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #fffaf5; color: #333; }
-    header, footer { background: #6f4e37; color: #fff; padding: 20px; text-align: center; }
-    nav a { margin: 0 15px; color: #fff; text-decoration: none; font-weight: bold; }
-    .container { padding: 20px; max-width: 1000px; margin: auto; }
-    .product { margin-bottom: 20px; }
-    .gallery img { width: 100%; max-width: 300px; margin: 10px; border-radius: 8px; }
-    form input, form textarea { width: 100%; padding: 10px; margin: 10px 0; }
-    form button { padding: 10px 20px; background: #6f4e37; color: #fff; border: none; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <title>BrewBuddy</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #fdf6f0;
+            color: #3e2f1c;
+        }
+        nav {
+            background-color: #6f4e37;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        header {
+            padding: 50px;
+            text-align: center;
+            background-color: #d7ccc8;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .slideshow {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        footer {
+            background-color: #6f4e37;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .settings-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #8d6e63;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>BrewBuddy</h1>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#flavours">Flavours</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<button class="settings-btn">⚙️ Settings</button>
+
+<header id="home">
+    <h1>Welcome to BrewBuddy</h1>
     <p>Brew Smart. Stay Sharp.</p>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+</header>
 
-  <div class="container">
-    <section id="home">
-      <h2>Welcome to BrewBuddy</h2>
-      <p>Your on-the-go coffee companion. Whether you're cramming for an exam or just need a morning boost, BrewBuddy delivers premium coffee in the convenience of a tea bag. Just pour, dip, and sip.</p>
-      <strong>New Arrival:</strong> <em>All-Nighter Edition</em> – Extra strong for study marathons!
-    </section>
+<div class="slideshow">
+    <img class="slides" src="slide1.jpg" alt="Coffee Slide 1">
+    <img class="slides" src="slide2.jpg" alt="Coffee Slide 2">
+    <img class="slides" src="slide3.jpg" alt="Coffee Slide 3">
+</div>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>BrewBuddy was born from one late-night study session too many. We saw how hard students work—and how little time they have. So we created a simple, fast, and affordable way to enjoy real coffee without machines or café prices.</p>
-      <p><strong>Mission:</strong> To energize South African students with high-quality, no-fuss coffee.</p>
-      <p><strong>Eco-Friendly:</strong> Our bags are biodegradable and our packaging is recyclable.</p>
-    </section>
+<section id="about">
+    <h2>About Us</h2>
+    <p>BrewBuddy is a revolutionary coffee experience—just like a tea bag, but for coffee lovers. We offer convenience, rich flavour, and multiple strength options, perfect for university students who need to power through long nights.</p>
+</section>
 
-    <section id="products">
-      <h2>Our Coffee Bags</h2>
-      <div class="product"><strong>Original Roast:</strong> Medium strength for everyday use.</div>
-      <div class="product"><strong>KickStart:</strong> Bold and strong caffeine boost.</div>
-      <div class="product"><strong>All-Nighter:</strong> Extra strong for long nights.</div>
-      <div class="product"><strong>Mocha Magic:</strong> A delicious chocolate-coffee blend.</div>
-      <div class="product"><strong>Vanilla Vibe:</strong> Smooth and creamy vanilla twist.</div>
-      <div class="product"><strong>Hazelnut Dream:</strong> Nutty and cozy.</div>
-      <div class="product"><strong>Caramel Chill:</strong> Sweet and mellow.</div>
-    </section>
+<section id="flavours">
+    <h2>Our Flavours</h2>
+    <ul>
+        <li>Strong Roast</li>
+        <li>Light Roast</li>
+        <li>Vanilla Twist</li>
+        <li>Night Owl (extra caffeine)</li>
+    </ul>
+</section>
 
-    <section id="gallery" class="gallery">
-      <h2>Gallery</h2>
-      <img src="https://via.placeholder.com/300x200?text=Study+with+BrewBuddy" alt="Study session" />
-      <img src="https://via.placeholder.com/300x200?text=BrewBuddy+in+Mug" alt="BrewBuddy in mug" />
-      <img src="https://via.placeholder.com/300x200?text=All+Flavours" alt="Coffee bag flavours" />
-    </section>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Phone: 071 185 9910</p>
+    <p>Email: info@brewbuddy.com</p>
+</section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>📧 Email: info@brewbuddy.co.za</p>
-      <p>📱 Instagram: @brewbuddy_sa</p>
-      <form>
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="4" placeholder="Your Message"></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </div>
-
-  <footer>
+<footer>
     <p>&copy; 2025 BrewBuddy. All rights reserved.</p>
-  </footer>
+</footer>
+
+<script>
+let index = 0;
+carousel();
+
+function carousel() {
+    let i;
+    const x = document.getElementsByClassName("slides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    index++;
+    if (index > x.length) { index = 1 }
+    x[index - 1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+</script>
+
 </body>
 </html>
